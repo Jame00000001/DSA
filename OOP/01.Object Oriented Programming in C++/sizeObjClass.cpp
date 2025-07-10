@@ -12,5 +12,22 @@ int main(){
     cout << sizeof(b) << endl;
     cout << sizeof(obj) << " ";
 
-    return 0;
+}
+//Exmple 2
+class b{
+    //this is empty class
+};
+int main(){
+    b obj1,obj2;
+    cout << sizeof(obj1) << endl; //outpu:1
+    //ei khetre output ashbe 1 byte but it'empty class
+    //reson:Empty class e kono member na thakleo uniqe address rakhar jonno size = 1 byte rhake
+    //jate alada object er vinno vinno address thake 
+    cout << sizeof(obj2) << endl;//outpu:1
+
+    cout << &obj1 << endl;//er address ek rkm->0x61ff0f
+    cout << &obj2 << endl;//er address ek rkm->0x61ff0e
+    
+
+    
 }
